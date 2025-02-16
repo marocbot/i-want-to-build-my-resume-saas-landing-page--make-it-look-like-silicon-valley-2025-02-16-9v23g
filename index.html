@@ -3,9 +3,23 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enhanced Landing Page</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body>
+    <html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Resume Builder SAAS | Silicon Valley Style</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <style>
+        .hover-scale { transition: transform 0.3s ease-in-out; }
+        .hover-scale:hover { transform: scale(1.02); }
+        .hover-shadow { transition: box-shadow 0.3s ease-in-out; }
+        .hover-shadow:hover { box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1); }
+    </style>
 </head>
 <body class="font-sans antialiased bg-white">
     <!-- Announcement Bar -->
@@ -18,21 +32,31 @@
         <nav class="container mx-auto px-6 py-4">
             <div class="flex items-center justify-between">
                 <div class="flex items-center">
-                    <a href="#" class="text-2xl font-bold text-gray-800">ResumePro</a>
+                    <a href="https://marocbot.github.io/i-want-to-build-my-resume-saas-landing-page--make-it-look-like-silicon-valley-2025-02-16-9v23g" class="text-2xl font-bold text-gray-800 hover:text-blue-600 transition duration-300">ResumePro</a>
                 </div>
                 <div class="hidden md:flex items-center space-x-8">
-                    <a href="#features" class="text-gray-600 hover:text-gray-900 transition duration-300">Features</a>
-                    <a href="#benefits" class="text-gray-600 hover:text-gray-900 transition duration-300">Benefits</a>
-                    <a href="#faq" class="text-gray-600 hover:text-gray-900 transition duration-300">FAQ</a>
-                    <a href="https://buy.stripe.com/6oE17Y2hFard6Pu5kk" class="bg-blue-600 text-white px-6 py-2 rounded-full hover:bg-blue-700 transition duration-300 transform hover:scale-105">
+                    <a href="#features" class="text-gray-600 hover:text-blue-600 transition duration-300">Features</a>
+                    <a href="#benefits" class="text-gray-600 hover:text-blue-600 transition duration-300">Benefits</a>
+                    <a href="#testimonials" class="text-gray-600 hover:text-blue-600 transition duration-300">Testimonials</a>
+                    <a href="#about" class="text-gray-600 hover:text-blue-600 transition duration-300">About</a>
+                    <a href="#faq" class="text-gray-600 hover:text-blue-600 transition duration-300">FAQ</a>
+                    <a href="https://buy.stripe.com/6oE17Y2hFard6Pu5kk" 
+                       class="bg-blue-600 text-white px-6 py-2 rounded-full hover:bg-blue-700 transition duration-300 transform hover:scale-105 shadow-md hover:shadow-lg">
                         Buy Now
                     </a>
                 </div>
-                <button class="md:hidden">
-                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
-                    </svg>
+                <button class="mobile-menu-button md:hidden" aria-label="Toggle mobile menu">
+                    <i class="fas fa-bars text-2xl"></i>
                 </button>
+            </div>
+            <!-- Mobile Menu -->
+            <div class="mobile-menu hidden md:hidden mt-4 bg-white rounded-lg shadow-lg absolute left-0 right-0 p-4">
+                <a href="#features" class="block py-2 px-4 text-gray-600 hover:bg-blue-50 rounded transition duration-300">Features</a>
+                <a href="#benefits" class="block py-2 px-4 text-gray-600 hover:bg-blue-50 rounded transition duration-300">Benefits</a>
+                <a href="#testimonials" class="block py-2 px-4 text-gray-600 hover:bg-blue-50 rounded transition duration-300">Testimonials</a>
+                <a href="#about" class="block py-2 px-4 text-gray-600 hover:bg-blue-50 rounded transition duration-300">About</a>
+                <a href="#faq" class="block py-2 px-4 text-gray-600 hover:bg-blue-50 rounded transition duration-300">FAQ</a>
+                <a href="https://buy.stripe.com/6oE17Y2hFard6Pu5kk" class="block py-2 px-4 text-white bg-blue-600 rounded-full text-center mt-4 hover:bg-blue-700 transition duration-300">Buy Now</a>
             </div>
         </nav>
     </header>
@@ -50,10 +74,10 @@
                 Build Your Resume Like a Silicon Valley Pro
             </h1>
             <p class="text-xl md:text-2xl mb-8 text-gray-200">
-                Remove Backgrounds in Seconds
+                Create a professional resume that stands out with our AI-powered tools
             </p>
             <a href="https://buy.stripe.com/6oE17Y2hFard6Pu5kk" 
-               class="inline-block bg-blue-600 text-white px-8 py-4 rounded-full text-lg font-semibold hover:bg-blue-700 transition duration-300 transform hover:scale-105">
+               class="inline-block bg-blue-600 text-white px-8 py-4 rounded-full text-lg font-semibold hover:bg-blue-700 transition duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl">
                 Get Started Now
             </a>
         </div>
@@ -66,31 +90,29 @@
                 Powerful Features
             </h2>
             <div class="grid grid-cols-1 md:grid-cols-3 gap-12">
-                <!-- Feature 1 -->
-                <div class="bg-white rounded-xl shadow-lg p-8 transform hover:scale-105 transition duration-300">
+                <!-- Feature cards with enhanced styling -->
+                <div class="bg-white rounded-xl shadow-lg p-8 transform hover:scale-105 transition duration-300 hover:shadow-xl">
                     <div class="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mb-6">
                         <i class="fas fa-magic text-2xl text-blue-600"></i>
                     </div>
-                    <h3 class="text-xl font-semibold mb-4">Background Cleaner</h3>
-                    <p class="text-gray-600">Remove backgrounds instantly with our advanced AI technology</p>
+                    <h3 class="text-xl font-semibold mb-4">AI Resume Builder</h3>
+                    <p class="text-gray-600">Create professional resumes instantly with our advanced AI technology that tailors content to your industry.</p>
                 </div>
                 
-                <!-- Feature 2 -->
-                <div class="bg-white rounded-xl shadow-lg p-8 transform hover:scale-105 transition duration-300">
+                <div class="bg-white rounded-xl shadow-lg p-8 transform hover:scale-105 transition duration-300 hover:shadow-xl">
                     <div class="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mb-6">
                         <i class="fas fa-edit text-2xl text-blue-600"></i>
                     </div>
-                    <h3 class="text-xl font-semibold mb-4">Image Editor</h3>
-                    <p class="text-gray-600">Professional editing tools at your fingertips</p>
+                    <h3 class="text-xl font-semibold mb-4">Smart Templates</h3>
+                    <p class="text-gray-600">Choose from hundreds of professionally designed templates optimized for ATS systems.</p>
                 </div>
                 
-                <!-- Feature 3 -->
-                <div class="bg-white rounded-xl shadow-lg p-8 transform hover:scale-105 transition duration-300">
+                <div class="bg-white rounded-xl shadow-lg p-8 transform hover:scale-105 transition duration-300 hover:shadow-xl">
                     <div class="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mb-6">
                         <i class="fas fa-robot text-2xl text-blue-600"></i>
                     </div>
-                    <h3 class="text-xl font-semibold mb-4">AI Image Cleaner</h3>
-                    <p class="text-gray-600">Smart AI-powered image enhancement and optimization</p>
+                    <h3 class="text-xl font-semibold mb-4">Skill Analyzer</h3>
+                    <p class="text-gray-600">Our AI analyzes your experience to highlight the most relevant skills for your target role.</p>
                 </div>
             </div>
         </div>
@@ -103,16 +125,17 @@
             <div class="container mx-auto px-6">
                 <div class="flex flex-col md:flex-row items-center gap-12">
                     <div class="md:w-1/2">
-                        <h3 class="text-3xl font-bold mb-6">Create Clean Pics for Social Media</h3>
-                        <p class="text-gray-600 text-lg mb-8">Perfect your images for Facebook, Instagram, eBay, and Etsy with our professional tools.</p>
-                        <a href="https://buy.stripe.com/6oE17Y2hFard6Pu5kk" class="bg-blue-600 text-white px-8 py-3 rounded-full inline-block hover:bg-blue-700 transition duration-300">
-                            Start Creating
+                        <h3 class="text-3xl font-bold mb-6">Stand Out to Employers</h3>
+                        <p class="text-gray-600 text-lg mb-8">Our AI-powered resume builder helps you create compelling resumes that catch recruiters' attention. With industry-specific keywords and optimized formatting, your resume will rise to the top of the stack.</p>
+                        <a href="https://buy.stripe.com/6oE17Y2hFard6Pu5kk" 
+                           class="bg-blue-600 text-white px-8 py-3 rounded-full inline-block hover:bg-blue-700 transition duration-300 transform hover:scale-105 shadow-md hover:shadow-lg">
+                            Start Building
                         </a>
                     </div>
                     <div class="md:w-1/2">
                         <img src="https://images.unsplash.com/photo-1556740714-a8395b3bf30f?w=800&h=600&fit=crop&q=80" 
-                             alt="Social Media Images" 
-                             class="rounded-xl shadow-lg">
+                             alt="Professional Resume Building" 
+                             class="rounded-xl shadow-lg hover:shadow-xl transition duration-300">
                     </div>
                 </div>
             </div>
@@ -124,14 +147,15 @@
                 <div class="flex flex-col-reverse md:flex-row items-center gap-12">
                     <div class="md:w-1/2">
                         <img src="https://images.unsplash.com/photo-1502982720700-bfff97f2ecac?w=800&h=600&fit=crop&q=80" 
-                             alt="Professional Editing" 
-                             class="rounded-xl shadow-lg">
+                             alt="ATS-Friendly Resumes" 
+                             class="rounded-xl shadow-lg hover:shadow-xl transition duration-300">
                     </div>
                     <div class="md:w-1/2">
-                        <h3 class="text-3xl font-bold mb-6">Professional-Grade Tools</h3>
-                        <p class="text-gray-600 text-lg mb-8">Access enterprise-level image editing features without the complexity.</p>
-                        <a href="https://buy.stripe.com/6oE17Y2hFard6Pu5kk" class="bg-blue-600 text-white px-8 py-3 rounded-full inline-block hover:bg-blue-700 transition duration-300">
-                            Explore Tools
+                        <h3 class="text-3xl font-bold mb-6">ATS-Optimized Templates</h3>
+                        <p class="text-gray-600 text-lg mb-8">Our templates are designed to pass Applicant Tracking Systems with flying colors. Each template is tested against major ATS platforms to ensure your resume gets seen by human recruiters.</p>
+                        <a href="https://buy.stripe.com/6oE17Y2hFard6Pu5kk" 
+                           class="bg-blue-600 text-white px-8 py-3 rounded-full inline-block hover:bg-blue-700 transition duration-300 transform hover:scale-105 shadow-md hover:shadow-lg">
+                            View Templates
                         </a>
                     </div>
                 </div>
@@ -143,18 +167,98 @@
             <div class="container mx-auto px-6">
                 <div class="flex flex-col md:flex-row items-center gap-12">
                     <div class="md:w-1/2">
-                        <h3 class="text-3xl font-bold mb-6">AI-Powered Enhancement</h3>
-                        <p class="text-gray-600 text-lg mb-8">Let our AI do the heavy lifting for perfect results every time.</p>
-                        <a href="https://buy.stripe.com/6oE17Y2hFard6Pu5kk" class="bg-blue-600 text-white px-8 py-3 rounded-full inline-block hover:bg-blue-700 transition duration-300">
+                        <h3 class="text-3xl font-bold mb-6">Smart Content Suggestions</h3>
+                        <p class="text-gray-600 text-lg mb-8">Let our AI analyze your experience and suggest powerful action verbs, industry-specific keywords, and achievements that make your resume more impactful. Never struggle with writer's block again.</p>
+                        <a href="https://buy.stripe.com/6oE17Y2hFard6Pu5kk" 
+                           class="bg-blue-600 text-white px-8 py-3 rounded-full inline-block hover:bg-blue-700 transition duration-300 transform hover:scale-105 shadow-md hover:shadow-lg">
                             Try AI Features
                         </a>
                     </div>
                     <div class="md:w-1/2">
                         <img src="https://images.unsplash.com/photo-1471341971476-ae15ff5dd4ea?w=800&h=600&fit=crop&q=80" 
-                             alt="AI Enhancement" 
-                             class="rounded-xl shadow-lg">
+                             alt="AI Content Suggestions" 
+                             class="rounded-xl shadow-lg hover:shadow-xl transition duration-300">
                     </div>
                 </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="py-24 bg-gray-50">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl md:text-4xl font-bold text-center mb-16">What Our Users Say</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <!-- Testimonial 1 -->
+                <div class="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition duration-300">
+                    <div class="flex text-yellow-400 mb-4">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <p class="text-gray-600 mb-4">"The AI suggestions helped me highlight achievements I would have otherwise forgotten. Landed interviews at 3 tech companies within a week!"</p>
+                    <div class="font-semibold">Sarah Chen</div>
+                    <div class="text-sm text-gray-500">Software Engineer at Google</div>
+                </div>
+
+                <!-- Testimonial 2 -->
+                <div class="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition duration-300">
+                    <div class="flex text-yellow-400 mb-4">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <p class="text-gray-600 mb-4">"The ATS-optimized templates are a game-changer. My application response rate increased by 300% after switching to ResumePro."</p>
+                    <div class="font-semibold">Michael Rodriguez</div>
+                    <div class="text-sm text-gray-500">Product Manager at Amazon</div>
+                </div>
+
+                <!-- Testimonial 3 -->
+                <div class="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition duration-300">
+                    <div class="flex text-yellow-400 mb-4">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <p class="text-gray-600 mb-4">"Created a perfect resume in under 30 minutes. The smart content suggestions made writing accomplishments so much easier."</p>
+                    <div class="font-semibold">Emily Watson</div>
+                    <div class="text-sm text-gray-500">Marketing Director at Netflix</div>
+                </div>
+
+                <!-- Testimonial 4 -->
+                <div class="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition duration-300">
+                    <div class="flex text-yellow-400 mb-4">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <p class="text-gray-600 mb-4">"Worth every penny! The industry-specific keywords helped me pass the ATS and land my dream job at a top tech company."</p>
+                    <div class="font-semibold">David Park</div>
+                    <div class="text-sm text-gray-500">Data Scientist at Microsoft</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Us Section -->
+    <section id="about" class="py-24 bg-white">
+        <div class="container mx-auto px-6 max-w-4xl">
+            <h2 class="text-3xl md:text-4xl font-bold text-center mb-12">About ResumePro</h2>
+            <div class="space-y-8">
+                <p class="text-gray-600 text-lg leading-relaxed">
+                    Founded in 2022 by a team of Silicon Valley recruiters and AI experts, ResumePro emerged from a simple observation: traditional resume building wasn't keeping pace with modern hiring practices. Our founders spent years reviewing thousands of resumes and noticed that even qualified candidates were being filtered out by ATS systems or failing to effectively communicate their value to employers.
+                </p>
+                <p class="text-gray-600 text-lg leading-relaxed">
+                    Our mission is to democratize access to career opportunities by providing job seekers with the same tools and insights used by top professionals. We believe everyone deserves a chance to showcase their true potential, and we're committed to using cutting-edge AI technology to help people create resumes that open doors to their dream careers.
+                </p>
             </div>
         </div>
     </section>
@@ -164,29 +268,73 @@
         <div class="container mx-auto px-6">
             <h2 class="text-3xl md:text-4xl font-bold text-center mb-16">Frequently Asked Questions</h2>
             <div class="max-w-3xl mx-auto space-y-6">
-                <div class="bg-white rounded-lg shadow-md">
+                <!-- FAQ 1 -->
+                <div class="bg-white rounded-lg shadow-md hover:shadow-lg transition duration-300">
                     <button class="w-full px-8 py-6 text-left">
                         <div class="flex items-center justify-between">
-                            <span class="font-semibold">How does the background removal work?</span>
+                            <span class="font-semibold">How does the AI resume builder work?</span>
                             <span class="fas fa-chevron-down"></span>
                         </div>
-                        <div class="mt-3 text-gray-600 hidden">
-                            Our AI-powered technology automatically detects and removes backgrounds in seconds, delivering professional results.
+                        <div class="mt-3 text-gray-600">
+                            Our AI analyzes your input and industry requirements to suggest optimal content, formatting, and keywords. It helps you highlight relevant achievements and skills while ensuring ATS compatibility.
                         </div>
                     </button>
                 </div>
-                <!-- Add more FAQ items as needed -->
+
+                <!-- FAQ 2 -->
+                <div class="bg-white rounded-lg shadow-md hover:shadow-lg transition duration-300">
+                    <button class="w-full px-8 py-6 text-left">
+                        <div class="flex items-center justify-between">
+                            <span class="font-semibold">Are the templates ATS-friendly?</span>
+                            <span class="fas fa-chevron-down"></span>
+                        </div>
+                        <div class="mt-3 text-gray-600">
+                            Yes, all our templates are tested with major ATS systems to ensure maximum compatibility. We regularly update them based on the latest ATS requirements and hiring trends.
+                        </div>
+                    </button>
+                </div>
+
+                <!-- FAQ 3 -->
+                <div class="bg-white rounded-lg shadow-md hover:shadow-lg transition duration-300">
+                    <button class="w-full px-8 py-6 text-left">
+                        <div class="flex items-center justify-between">
+                            <span class="font-semibold">Can I export my resume in different formats?</span>
+                            <span class="fas fa-chevron-down"></span>
+                        </div>
+                        <div class="mt-3 text-gray-600">
+                            Yes, you can export your resume in PDF, Word, and plain text formats. Each format is optimized for different submission requirements while maintaining professional formatting.
+                        </div>
+                    </button>
+                </div>
+
+                <!-- FAQ 4 -->
+                <div class="bg-white rounded-lg shadow-md hover:shadow-lg transition duration-300">
+                    <button class="w-full px-8 py-6 text-left">
+                        <div class="flex items-center justify-between">
+                            <span class="font-semibold">What kind of support do you offer?</span>
+                            <span class="fas fa-chevron-down"></span>
+                        </div>
+                        <div class="mt-3 text-gray-600">
+                            We provide 24/7 email support, live chat during business hours, and comprehensive guides for using all features. Our team of resume experts is also available for personalized assistance.
+                        </div>
+                    </button>
+                </div>
             </div>
         </div>
     </section>
 
     <!-- CTA Section -->
     <section class="relative py-24 bg-gray-900 text-white">
-        <div class="container mx-auto px-6 text-center">
-            <h2 class="text-3xl md:text-4xl font-bold mb-8">Ready to Transform Your Images?</h2>
-            <p class="text-xl mb-12 text-gray-300">Join thousands of satisfied users creating professional images daily</p>
+        <div class="absolute inset-0 z-0">
+            <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=1600&h=900&fit=crop&q=80" 
+                 alt="Team collaboration" 
+                 class="w-full h-full object-cover opacity-20">
+        </div>
+        <div class="container mx-auto px-6 text-center relative z-10">
+            <h2 class="text-3xl md:text-4xl font-bold mb-8">Ready to Land Your Dream Job?</h2>
+            <p class="text-xl mb-12 text-gray-300">Join thousands of professionals who've accelerated their careers with ResumePro</p>
             <a href="https://buy.stripe.com/6oE17Y2hFard6Pu5kk" 
-               class="inline-block bg-blue-600 text-white px-8 py-4 rounded-full text-lg font-semibold hover:bg-blue-700 transition duration-300 transform hover:scale-105">
+               class="inline-block bg-blue-600 text-white px-8 py-4 rounded-full text-lg font-semibold hover:bg-blue-700 transition duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl">
                 Get Started Now
             </a>
         </div>
@@ -199,20 +347,22 @@
                 <div>
                     <h3 class="text-white text-lg font-semibold mb-4">Contact Us</h3>
                     <p class="mb-4">technik.adisam@gmail.com</p>
+                    <p class="mb-4">1-800-RESUME-PRO</p>
+                    <p>123 Tech Street, Silicon Valley, CA 94025</p>
                 </div>
                 <div>
                     <h3 class="text-white text-lg font-semibold mb-4">Company</h3>
                     <ul class="space-y-2">
-                        <li><a href="#" class="hover:text-white transition duration-300">About</a></li>
-                        <li><a href="#" class="hover:text-white transition duration-300">Blog</a></li>
+                        <li><a href="#about" class="hover:text-white transition duration-300">About</a></li>
+                        <li><a href="https://marocbot.github.io/i-want-to-build-my-resume-saas-landing-page--make-it-look-like-silicon-valley-2025-02-16-9v23g/blog.html" class="hover:text-white transition duration-300">Blog</a></li>
                         <li><a href="#" class="hover:text-white transition duration-300">Careers</a></li>
                     </ul>
                 </div>
                 <div>
                     <h3 class="text-white text-lg font-semibold mb-4">Legal</h3>
                     <ul class="space-y-2">
-                        <li><a href="#" class="hover:text-white transition duration-300">Privacy Policy</a></li>
-                        <li><a href="#" class="hover:text-white transition duration-300">Terms of Service</a></li>
+                        <li><a href="https://marocbot.github.io/i-want-to-build-my-resume-saas-landing-page--make-it-look-like-silicon-valley-2025-02-16-9v23g/privacy.html" class="hover:text-white transition duration-300">Privacy Policy</a></li>
+                        <li><a href="https://marocbot.github.io/i-want-to-build-my-resume-saas-landing-page--make-it-look-like-silicon-valley-2025-02-16-9v23g/terms.html" class="hover:text-white transition duration-300">Terms of Service</a></li>
                     </ul>
                 </div>
                 <div>
@@ -221,6 +371,7 @@
                         <a href="#" class="hover:text-white transition duration-300"><i class="fab fa-twitter"></i></a>
                         <a href="#" class="hover:text-white transition duration-300"><i class="fab fa-facebook"></i></a>
                         <a href="#" class="hover:text-white transition duration-300"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="hover:text-white transition duration-300"><i class="fab fa-linkedin"></i></a>
                     </div>
                 </div>
             </div>
@@ -229,5 +380,36 @@
             </div>
         </div>
     </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const mobileMenuButton = document.querySelector('header nav .mobile-menu-button');
+            const mobileMenu = document.querySelector('header nav .mobile-menu');
+            
+            if (mobileMenuButton && mobileMenu) {
+                mobileMenuButton.addEventListener('click', () => {
+                    mobileMenu.classList.toggle('hidden');
+                    const icon = mobileMenuButton.querySelector('i');
+                    if (icon) {
+                        icon.classList.toggle('fa-bars');
+                        icon.classList.toggle('fa-times');
+                    }
+                });
+
+                const mobileMenuLinks = mobileMenu.querySelectorAll('a');
+                mobileMenuLinks.forEach(link => {
+                    link.addEventListener('click', () => {
+                        mobileMenu.classList.add('hidden');
+                        const icon = mobileMenuButton.querySelector('i');
+                        if (icon) {
+                            icon.classList.remove('fa-times');
+                            icon.classList.add('fa-bars');
+                        }
+                    });
+                });
+            }
+        });
+    </script>
+</body>
 </body>
 </html>
